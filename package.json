@@ -2,6 +2,10 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "npm": "6.10.3",
+    "node": "12.6.0"
+  },
   "homepage": "https://sheaosaurus.github.io/challenge",
   "dependencies": {
     "@material-ui/core": "^4.9.3",
