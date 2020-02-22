@@ -23,6 +23,12 @@ export const DEFAULT_PERMISSIONS = {
   RETAIL: PERMISSION_GROUPS.RETAIL
 };
 
+export const DEFAULT_ORDER = [
+  PERMISSIONS.LINE_CHART,
+  PERMISSIONS.PIE_CHART,
+  PERMISSIONS.BAR_CHART
+];
+
 export const defaultArray = [];
 export const defaultObject = {};
 export const defaultString = "";

@@ -14,6 +14,9 @@ export const setDefaultUserPermissions = createRoutine(
   "SET_DEFAULT_USER_PERMISSIONS"
 );
 export const updateUserPermissions = createRoutine("UPDATE_USER_PERMISSIONS");
+export const setOverrideRenderOrder = createRoutine(
+  "SET_OVERRIDE_RENDER_ORDER"
+);
 
 /* GENERATE DATA ROUTINES */
 export const generateUserPermissions = createRoutine(

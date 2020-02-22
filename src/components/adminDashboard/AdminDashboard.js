@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import {
   getUserGroupList,
@@ -11,6 +11,7 @@ import {
   generatePermssionTypes,
   generateUserCheckboxes
 } from "../../utils/formUtils/checkboxUtils";
+import RenderOrder from "./../renderOrder/RenderOrder";
 
 /* CSS */
 import Container from "@material-ui/core/Container";
@@ -47,11 +48,9 @@ export const AdminDashboard = ({
   const generateUserPermissions = permissions => {
     return permissions.length ? (
       permissions.map(permission => (
-        <List>
-          <ListItem key={permission}>
-            <Typography variant="p" component="p">
-              {permission}
-            </Typography>
+        <List key={permission}>
+          <ListItem>
+            <p>{permission}</p>
           </ListItem>
         </List>
       ))
@@ -83,6 +82,8 @@ export const AdminDashboard = ({
               handlePermissionTypeClick
             )}
           </FormGroup>
+          <Typography variant="subtitle1">Render Order</Typography>
+          <RenderOrder />
         </Grid>
       )}
     </Container>

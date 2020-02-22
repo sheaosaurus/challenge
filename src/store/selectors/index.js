@@ -22,6 +22,12 @@ export const getToggledUserPermissions = state =>
 export const getDefualtUserPermissions = state =>
   state?.auth?.defaultPermissions ?? defaultArray;
 
+/* Render Order Selectors */
+export const getDefaultRenderedOrder = state =>
+  state?.renderOrder?.defaultOrder ?? defaultArray;
+export const getOverridenRenderedOrder = state =>
+  state?.renderOrder?.overriddenOrder ?? defaultArray;
+
 /* User Selectors */
 export const getCurrentUserPermissions = (state, currentUser) =>
   state?.users?.userGroupPermissions?.[currentUser] ?? defaultArray;

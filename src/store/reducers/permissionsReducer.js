@@ -1,9 +1,5 @@
-import {
-  setPermissionTypesList,
-  setToggledUserPermissions,
-  setToggledUser
-} from "../routines";
-import { defaultArray, defaultString } from "../../common/constants";
+import { setPermissionTypesList, setToggledUserPermissions } from "../routines";
+import { defaultArray } from "../../common/constants";
 
 const initialState = {
   permissionsTypesList: defaultArray,
@@ -12,7 +8,6 @@ const initialState = {
 
 export default function(state = initialState, action) {
   const { type, payload } = action;
-  console.log("action", action);
   switch (type) {
     case setPermissionTypesList.TRIGGER:
       return { ...state, permissionsTypesList: payload };
